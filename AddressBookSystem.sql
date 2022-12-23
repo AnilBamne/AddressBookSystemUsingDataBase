@@ -28,3 +28,7 @@ Update AddressBookTable Set PhoneNo=999999 Where FirstName='Sunil'
 
 --- uc5 deleting contact using persons name ---
 Delete from AddressBookTable Where FirstName='Sunil'
+
+--- Retrive person using city or state ---
+Select * From AddressBookTable Where City='Bidar'
+Select * From AddressBookTable Where State='Karnataka'
