@@ -32,3 +32,6 @@ Delete from AddressBookTable Where FirstName='Sunil'
 --- Retrive person using city or state ---
 Select * From AddressBookTable Where City='Bidar'
 Select * From AddressBookTable Where State='Karnataka'
+
+--- Get size of addressbook by city or state ---
+select count(*) as size from AddressBookTable where State='Karnataka'
