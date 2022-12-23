@@ -16,3 +16,8 @@ PhoneNo Int NOT NULL,
 Email VARCHAR(30) NOT NULL
 )
 select * from AddressBookTable
+
+--- uc3 Insert new contact to table ---
+Insert into AddressBookTable values('Anil','Bamne','Bhalki','Bidar','Karnataka',585416,81528176,'anilbamne20@gmail.com')
+Insert into AddressBookTable values('Sunil','Kumar','Patna','Patna','Bihar',223416,4637393,'sunil@gmail.com'),('Akshata','Kumari','Hubli','Dharwad','Karnataka',62343,3456432,'akshatak@gmail.com'),('Vinay','Kumar','Daadar','Mumbai','Maharashtra',76367,9856356,'vinaykumar@gmail.com')
+
