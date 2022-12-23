@@ -22,6 +22,9 @@ Insert into AddressBookTable values('Anil','Bamne','Bhalki','Bidar','Karnataka',
 Insert into AddressBookTable values('Sunil','Kumar','Patna','Patna','Bihar',223416,4637393,'sunil@gmail.com'),('Akshata','Kumari','Hubli','Dharwad','Karnataka',62343,3456432,'akshatak@gmail.com'),('Vinay','Kumar','Daadar','Mumbai','Maharashtra',76367,9856356,'vinaykumar@gmail.com')
 select * from AddressBookTable
 
---- uc4 updating contact using persons name ---
+--- uc4 editing contact using persons name ---
 Update AddressBookTable Set Zip=111111 Where FirstName='Vinay'
 Update AddressBookTable Set PhoneNo=999999 Where FirstName='Sunil'
+
+--- uc5 deleting contact using persons name ---
+Delete from AddressBookTable Where FirstName='Sunil'
