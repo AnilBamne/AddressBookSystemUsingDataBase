@@ -57,4 +57,12 @@ Update AddressBookTable Set AddressBookName='FamilyZone' where AddressBookType='
 Update AddressBookTable Set AddressBookName='FriendZone' where AddressBookType='Friend'
 Update AddressBookTable Set AddressBookName='Profession' where AddressBookType='colleagues'
 
+--- Ability to get count of contact by type ---
+select count(*) as size from AddressBookTable where AddressBookType='Family'
+select count(*) as size from AddressBookTable where AddressBookType='Friend'
+select count(*) as size from AddressBookTable where AddressBookType='colleagues'
+
+
+
+
 
