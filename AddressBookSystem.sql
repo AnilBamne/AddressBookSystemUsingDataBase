@@ -57,11 +57,15 @@ Update AddressBookTable Set AddressBookName='FamilyZone' where AddressBookType='
 Update AddressBookTable Set AddressBookName='FriendZone' where AddressBookType='Friend'
 Update AddressBookTable Set AddressBookName='Profession' where AddressBookType='colleagues'
 
---- Ability to get count of contact by type ---
+--- 10 Ability to get count of contact by type ---
 select count(*) as size from AddressBookTable where AddressBookType='Family'
 select count(*) as size from AddressBookTable where AddressBookType='Friend'
 select count(*) as size from AddressBookTable where AddressBookType='colleagues'
 
+--- uc11 Ability to add person to both Friend and Family ---
+Insert into AddressBookTable values('Shiva','Shankar','Kailash','Kailash','Himalaya',23234,746537,'shiva@Bossofuniverse.com','Family','FamilyZone')
+Insert into AddressBookTable values('Shiva','Shankar','Kailash','Kailash','Himalaya',23234,746537,'shiva@Bossofuniverse.com','Friend','FriendZone')
+select * from AddressBookTable
 
 
 
