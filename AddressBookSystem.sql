@@ -29,9 +29,14 @@ Update AddressBookTable Set PhoneNo=999999 Where FirstName='Sunil'
 --- uc5 deleting contact using persons name ---
 Delete from AddressBookTable Where FirstName='Sunil'
 
---- Retrive person using city or state ---
+--- uc6 Retrive person using city or state ---
 Select * From AddressBookTable Where City='Bidar'
 Select * From AddressBookTable Where State='Karnataka'
 
---- Get size of addressbook by city or state ---
+--- uc7 Get size of addressbook by city or state ---
 select count(*) as size from AddressBookTable where State='Karnataka'
+Insert into AddressBookTable values('Ramdas','Bamne','Bhalki','Bidar','Karnataka',23234,746537,'ramdas@gmail.com')
+Insert into AddressBookTable values('Sunil','Kumar','Patna','Patna','Bihar',223416,4637393,'sunil@gmail.com'),('Aneesh','Katta','Hyd','Hyderabad','Telangana',44455,774238,'aneesh@yahoo.com'),('kalpana','sharma','Wagholi','Pune','Maharashtra',343455,45647755,'kalpana@hotmail.com')
+
+--- uc8 sorting entries alphabetically by persons name ---
+select *from AddressBookTable order by FirstName
