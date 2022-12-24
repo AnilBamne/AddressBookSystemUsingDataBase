@@ -40,3 +40,21 @@ Insert into AddressBookTable values('Sunil','Kumar','Patna','Patna','Bihar',2234
 
 --- uc8 sorting entries alphabetically by persons name ---
 select *from AddressBookTable order by FirstName
+
+--- uc9 Ability to Identify each address book by name and type ---
+--- Adding columns 1.AddressBookType 2.AddressBookName
+Alter Table AddressBookTable Add AddressBookType varchar(100),AddressBookName varchar(100)
+select *from AddressBookTable
+Update AddressBookTable Set AddressBookType='Family' Where FirstName='Anil'
+Update AddressBookTable Set AddressBookType='Family' Where FirstName='Ramdas'
+Update AddressBookTable Set AddressBookType='Friend' Where FirstName='Akshata'
+Update AddressBookTable Set AddressBookType='Friend' Where FirstName='Vinay'
+Update AddressBookTable Set AddressBookType='Friend' Where FirstName='Sunil'
+Update AddressBookTable Set AddressBookType='colleagues' Where FirstName='Aneesh'
+Update AddressBookTable Set AddressBookType='colleagues' Where FirstName='kalpana'
+--- Adding AddressBook Name ---
+Update AddressBookTable Set AddressBookName='FamilyZone' where AddressBookType='Family'
+Update AddressBookTable Set AddressBookName='FriendZone' where AddressBookType='Friend'
+Update AddressBookTable Set AddressBookName='Profession' where AddressBookType='colleagues'
+
+
